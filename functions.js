@@ -18,8 +18,7 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    const dogs = arr.filter((otherPets) => otherPets.type === 'dog');
-    return dogs;
+    return arr.filter((otherPets) => otherPets.type === 'dog');
 }
 
 /*
@@ -29,8 +28,7 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    const names = arr.map((otherPets) => otherPets.name);
-    return names;
+    return arr.map((otherPets) => otherPets.name);
 }
 
 /*
@@ -39,9 +37,9 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    const names = arr.filter((otherPets) => otherPets.type === 'dog');
-    const filteredNames = names.map((names) => names.name);
-    return filteredNames;
+    return arr
+        .filter((otherPets) => otherPets.type === 'dog')
+        .map((names) => names.name);
 }
 
 /*
@@ -51,7 +49,7 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    return arr.map((pet) => pet.type).reverse();
 }
 
 /*
@@ -66,7 +64,7 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    return arr.map((ar) => ({ nombre: ar.name, tipo: ar.type }));
 }
 
 /*
@@ -80,7 +78,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    return arr.map((ar) => ({ name: ar.name, isHungry: true, type: ar.type }));
 }
 
 /*
@@ -94,7 +92,7 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    return arr.map((ar) => ({ name: ar.name.toUpperCase(), type: ar.type }));
 }
 
 /*
@@ -104,7 +102,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map((ar) => ar.name + ar.type);
 }
 
 /*
@@ -117,7 +115,7 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    return arr.filter((ar) => ar.name === name).pop();
 }
 
 /*
@@ -143,7 +141,10 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    return arr.map((ar) => [
+        ['name', ar.name],
+        ['type', ar.type],
+    ]);
 }
 
 ////////////////////////////////////////////////////////
