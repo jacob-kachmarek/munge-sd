@@ -115,7 +115,7 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return arr.filter((ar) => ar.name === name).pop();
+    return arr.find((ar) => ar.name === name);
 }
 
 /*
