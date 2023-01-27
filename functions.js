@@ -173,7 +173,7 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    return arr.filter((ar) => ar.type === 'car');
 }
 
 /*
@@ -186,7 +186,7 @@ Output:
 */
 
 export function getChevyCars(arr) {
-    return [];
+    return arr.filter((ar) => ar.type === 'car' && ar.make === 'chevy');
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
