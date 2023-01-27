@@ -18,7 +18,8 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const dogs = arr.filter((otherPets) => otherPets.type === 'dog');
+    return dogs;
 }
 
 /*
@@ -28,7 +29,8 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const names = arr.map((otherPets) => otherPets.name);
+    return names;
 }
 
 /*
@@ -76,7 +78,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return []
+    return [];
 }
 
 /*
@@ -92,7 +94,6 @@ Output:
 export function makeShoutingArray(arr) {
     return [];
 }
-
 
 /*
 
@@ -226,14 +227,12 @@ export function makeCountObject(arr) {
     return {};
 }
 
-
 /*
 
 Output: 
 (order doesn't matter--but the string must include all keys for the first object in the array)
 'typemakemodelage'
  */
-
 
 export function makeKeysString(arr) {
     return '';
