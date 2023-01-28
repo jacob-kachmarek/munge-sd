@@ -203,7 +203,12 @@ Output:
  */
 
 export function makeModelsStringWithReduce(arr) {
-    return '';
+    return arr
+        .map((ar) => ar.model)
+        .reduce((acc, curr) => {
+            acc = acc + curr;
+            return acc;
+        });
 }
 
 /*
@@ -213,7 +218,7 @@ Output: 14
  */
 
 export function getSumOfAges(arr) {
-    return 0;
+    return arr.map((ar) => ar.age).reduce((acc, curr) => acc + curr);
 }
 
 /*
